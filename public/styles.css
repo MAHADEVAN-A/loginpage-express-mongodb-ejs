@@ -5,17 +5,40 @@
 body{
     margin:0;
     padding:0;
-    font-family: sans-serif;
-    background: #3a6186;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* display: flex; */
+    /* align-items: center; */   
+     font-family: 'Roboto', sans-serif;
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
+
+.title{
+    margin:0 2rem;padding:0;
+    font-family: 'Pacifico', cursive;
+    color:white;
+    /* padding:2rem; */
+}
+
 .dform{
     display: flex;
-    justify-content: center;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
     align-items: center;
-    padding:4rem 0;
+    padding:3rem 4rem;
+    border-radius: 10px;
+    width:80%;
+    max-width:1000px;
+    margin:0 auto;
+    margin-top:2rem;
+    background-color: rgb(252, 243, 243,.9);
 }
+
+.form__img{
+    width:30%;
+}
+
 i{
     display: block;
     margin:20px 0;
@@ -30,11 +53,12 @@ i{
 }
 
 .form{
-    background-color: rgb(252, 243, 243,.2);
-    border-radius: 10px;
+    width:90%;
+    max-width:500px;
     display: flex;
     font-size: 1.3rem;
-    padding:4rem 4rem;
+    /* margin-top:2rem; */
+    /* padding:4rem 0; */
     flex-direction: column;
     /* justify-content: space-between; */
 }
@@ -67,4 +91,24 @@ input:focus{
 .form__button:hover{
     background-color: black;
     color:white;
+}
+
+.ptitle{
+    font-weight: 800;
+}
+
+
+@media(max-width:1099px){
+    .dform{
+        flex-direction: column-reverse;
+        padding:3rem 1rem;
+    }
+    .form__img{
+        width:70%;
+        margin:0 auto;
+        margin-bottom:3rem;
+    }
+    .form{
+        width:95%;
+    }
 }

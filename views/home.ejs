@@ -7,10 +7,14 @@
     <title>Document</title><link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-/>
+/><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Roboto&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
+    <div class="title">
+        <h1>Logger</h1>
+    </div>
     <div class="dform">
         <form class="form" action="/form" method="POST" enctype="application/x-www-form-urlencoded">
             <div class="col">  
@@ -25,7 +29,7 @@
                 <button class="form__button" type="submit">send</button>
             </div>
             <div class="col">  
-                <p>People who are logged in:</p>
+                <p class="ptitle">People who are logged in:</p>
                 <%person.forEach((pers)=>{%>
                 <div class="content">
                     <p><%=pers.name%></p>
@@ -34,6 +38,7 @@
                 <%})%>
             </div>
         </form>
+        <img class="form__img" src="/static/onlinearticle.svg" alt="image1">
     </div>
     <script>
         // console.log('hello')
