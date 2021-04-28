@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+/>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="dform">
+        <form class="form" action="/form" method="POST" enctype="application/x-www-form-urlencoded">
+            <div class="col">  
+                <label for="name">Enter the name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                <input type="text" name="name"/>   
+            </div>
+            <div class="col">
+                <label for="password">Enter the password:&nbsp</label>  
+                <input type="password" name="password"/>
+            </div>  
+            <div class="col"> 
+                <button class="form__button" type="submit">send</button>
+            </div>
+            <div class="col">  
+                <p>People who are logged in:</p>
+                <%person.forEach((pers)=>{%>
+                <div class="content">
+                    <p><%=pers.name%></p>
+                    <i id="<%=pers._id%>" class="fas fa-trash"></i>
+                </div>
+                <%})%>
+            </div>
+        </form>
+    </div>
+    <script>
+        // console.log('hello')
+        const icon = document.getElementsByTagName('i')
+        const icons = [...icon]
+        icons.forEach((item)=>{
+            item.addEventListener('click',()=>{ 
+            window.location= `http://localhost:3000/deletePerson/${item.id}`;
+            })
+        })
+        console.log(icons);
+    </script>
+</body>
+</html>
+
+<!--
+.hero{
+    /* background-color: cadetblue; */
+    padding:3rem 0;
+}
+.container{
+    width:80%;
+    margin:0 auto;
+    padding:2rem;
+}
+.hero__content{
+   width:50%;     
+}
+.hero__title{
+    color:rgb(228, 228, 231);
+    font-weight: 800;
+    font-size: 3rem;
+}
+.hero__tag{
+    /* font-weight:700; */
+    color:wheat;
+    font-size:1.2rem;
+    line-height: 2rem;
+} -->
+
+
+
+    <!-- <div class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">Welcome to my webpage</h1>
+                <p class="hero__tag">Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor!</p>
+            </div>
+        </div>
+    </div> -->
