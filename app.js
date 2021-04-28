@@ -16,7 +16,7 @@ app.use('/',router)
 
 
 
-mongoose.connect('mongodb+srv://mahadevan:mahadevan21csc@cluster0.xu12m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://mahadevan:password@cluster0.xu12m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
 { useNewUrlParser: true,useUnifiedTopology: true,useFindAndModify:false })
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
